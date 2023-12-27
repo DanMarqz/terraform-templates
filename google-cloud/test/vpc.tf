@@ -2,6 +2,11 @@ provider "google" {
   project = var.gcp_project_id
   region  = var.gcp_region
 }
+provider "google-beta" {
+  project = gcp_project_id
+  region  = var.gcp_region
+}
+
 resource "google_compute_network" "vpc" {
   name                    = "${var.gcp_project_id}-vpc"
   auto_create_subnetworks = false
