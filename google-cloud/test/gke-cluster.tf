@@ -38,6 +38,10 @@ resource "google_container_node_pool" "primary_nodes" {
     metadata = {
       disable-legacy-endpoints = "true"
     }
+
+    boot_disk {
+      size_gb = var.node_disk_size
+    }
   }
 }
 
