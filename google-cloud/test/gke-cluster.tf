@@ -40,6 +40,7 @@ resource "google_container_node_pool" "primary_nodes" {
     }
 
     disk_size_gb = var.node_disk_size
+    disk_type    = "pd-standard"
   }
 }
 
