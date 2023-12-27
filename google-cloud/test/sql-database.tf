@@ -1,4 +1,14 @@
 # https://www.cloudskillsboost.google/focuses/1215?parent=catalog
+provider "google" {
+  project = gcp_project_id
+  region  = var.gcp_region
+}
+
+provider "google-beta" {
+  project = gcp_project_id
+  region  = var.gcp_region
+}
+
 resource "random_id" "name" {
   provider = random
   byte_length = 2
