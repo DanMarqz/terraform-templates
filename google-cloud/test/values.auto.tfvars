@@ -12,3 +12,6 @@ gke_password    = "daniel123"
 
 # gke_num_nodes   = [NUMBER_OF_NODES]
 gke_num_nodes   = 1
+
+# node_disk_size   = [NUMBER_OF_GB]
+node_disk_size   = 50
