@@ -8,6 +8,7 @@ resource "google_container_cluster" "primary" {
   name     = "${var.gcp_project_id}-gke"
   location = var.gcp_region
 
+  deletion_protection = false
   remove_default_node_pool = true
   initial_node_count       = 1
 
@@ -29,11 +30,11 @@ resource "google_container_node_pool" "primary_nodes" {
   node_count = var.gke_num_nodes
 
   node_config {
-    oauth_scopes = [
-      "https://www.googleapis.com/auth/logging.write",
-      "https://www.googleapis.com/auth/monitoring",
-    ]
-
+    # oauth_scopes = [
+    #   "https://www.googleapis.com/auth/logging.write",
+    #   "https://www.googleapis.com/auth/monitoring",
+    # ]
+    
     labels = {
       env = var.gcp_project_id
     }
