@@ -1,4 +1,6 @@
+# https://developer.hashicorp.com/terraform/tutorials/kubernetes/gke
 # GKE cluster
+
 data "google_container_engine_versions" "gke_version" {
   location = var.gcp_region
   version_prefix = "1.27."
@@ -34,7 +36,7 @@ resource "google_container_node_pool" "primary_nodes" {
     #   "https://www.googleapis.com/auth/logging.write",
     #   "https://www.googleapis.com/auth/monitoring",
     # ]
-    
+
     labels = {
       env = var.gcp_project_id
     }
