@@ -13,7 +13,7 @@ resource "google_sql_database_instance" "master" {
   deletion_protection = false
 
   settings {
-    tier                        = var.tier
+    tier                        = var.tier 
     # activation_policy           = var.activation_policy
     disk_autoresize             = var.disk_autoresize
     disk_size                   = var.disk_size
