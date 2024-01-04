@@ -32,7 +32,7 @@ user_name = "danieldb"
 user_password = "danieldb123."
 
 # activation_policy = [Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.]
-activation_policy = "ON_DEMAND"
+# activation_policy = "ON_DEMAND"
 
 #disk_autoresize = [DISK_AUTORESIZE_DB]
 disk_autoresize = false
